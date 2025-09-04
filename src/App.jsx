@@ -10,14 +10,14 @@ function App() {
       <div className='text-center font-extrabold text-4xl'>
         00:00
       </div>
-      <div className='flex justify-center gap-14 my-16'>
-        <button>
+      <div className='flex justify-center gap-4 my-16'>
+        <button className='bg-indigo-600 text-white px-auto py-4 rounded-2xl w-40'>
           Start
         </button>
-        <button>
+        <button className='bg-indigo-600 text-white px-auto py-4 rounded-2xl w-40'>
           Continue
         </button>
-        <button>
+        <button className='bg-indigo-600 text-white px-auto py-4 rounded-2xl w-40'>
           Stop
         </button>
       </div>
