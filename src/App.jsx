@@ -11,13 +11,13 @@ function App() {
         00:00
       </div>
       <div className='flex justify-center gap-4 my-16'>
-        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer'>
+        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer hover:bg-indigo-800'>
           Start
         </button>
-        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer'>
+        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer hover:bg-indigo-800'>
           Continue
         </button>
-        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer'>
+        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer hover:bg-indigo-800'>
           Stop
         </button>
       </div>
