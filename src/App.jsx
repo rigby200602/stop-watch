@@ -14,6 +14,7 @@ function App() {
       }
     }, 1000)
   }
+  const handleContinue = () => {} 
   const handleStop = () => {
     clearInterval(interval);
     setCount(0);
@@ -30,7 +31,8 @@ function App() {
         onClick={handleStart}>
           Start
         </button>
-        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'>
+        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'
+        onClick={handleContinue}>
           Continue
         </button>
         <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'
