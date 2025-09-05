@@ -23,7 +23,7 @@ function App() {
       </div>
       <div className='flex justify-center gap-4 my-16'>
         <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'
-        onAbort={handleStart}>
+        onClick={handleStart}>
           Start
         </button>
         <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'>
