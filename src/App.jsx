@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
   const [showSeconds, setShowSeconds] = useState(0)
   const [showMinutes, setShowMinutes] = useState(0)
+  const [isActive, setIsActive] = useState(false)
   if (showSeconds === 0) {
     setShowSeconds('00')
   } 
