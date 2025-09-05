@@ -5,14 +5,10 @@ function App() {
   const [showSeconds, setShowSeconds] = useState(0)
   const [showMinutes, setShowMinutes] = useState(0)
   const [isActive, setIsActive] = useState(false)
-  if (showSeconds === 0) {
-    setShowSeconds('00')
-  } 
-  if (showMinutes === 0) {
-    setShowMinutes('00')
-  }
   const handleStart = () => {
-    setShowSeconds(s => s + 1)
+    const interval = setInterval(() => {
+      setShowSeconds(s => s + 1)
+    }, 1000)
   }
 
   return (
