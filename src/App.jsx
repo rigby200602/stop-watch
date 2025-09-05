@@ -1,10 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
   const [showSeconds, setShowSeconds] = useState(0)
   const [showMinutes, setShowMinutes] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
+  
+  useEffect(() => {
+    
+  }, [isRunning])
+
   const handleStart = () => {
     setIsRunning(true);
   }
