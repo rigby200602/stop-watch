@@ -2,11 +2,16 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [showSeconds, setShowSeconds] = useState(0)
+  const [showSeconds, setShowSeconds] = useState(58)
   const [showMinutes, setShowMinutes] = useState(0)
   const handleStart = () => {
     const interval = setInterval(() => {
+      if (showSeconds <= 59) {
       setShowSeconds(s => s + 1)
+      } else {
+        setShowMinutes(m => m + 1)
+        setShowSeconds(0)
+      }
     }, 1000)
   }
 
