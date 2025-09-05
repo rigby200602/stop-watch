@@ -34,7 +34,7 @@ function App() {
     setIsRunning(false)
   };
   const handleReset = () => {
-    setIsRunning(false)
+    setIsRunning(true)
     setShowSeconds(0)
     setShowMinutes(0)
   }
