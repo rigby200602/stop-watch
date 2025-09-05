@@ -12,7 +12,7 @@ function App() {
     setShowMinutes('00')
   }
   const handleStart = () => {
-    setShowSeconds(showSeconds + 1)
+    setShowSeconds(s => s + 1)
   }
 
   return (
