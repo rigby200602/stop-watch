@@ -4,7 +4,6 @@ import './App.css'
 function App() {
   const [showSeconds, setShowSeconds] = useState(0)
   const [showMinutes, setShowMinutes] = useState(0)
-  const [isActive, setIsActive] = useState(false)
   const handleStart = () => {
     const interval = setInterval(() => {
       setShowSeconds(s => s + 1)
