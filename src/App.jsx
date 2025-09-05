@@ -4,20 +4,15 @@ import './App.css'
 function App() {
   const [showSeconds, setShowSeconds] = useState(0)
   const [showMinutes, setShowMinutes] = useState(0)
+  const [isRunning, setIsRunning] = useState(false)
   const handleStart = () => {
-    const interval = setInterval(() => {
-      if (showSeconds <= 59) {
-      setShowSeconds(s => s + 1)
-      } else {
-        setShowMinutes(m => m + 1)
-        setShowSeconds(0)
-      }
-    }, 1000)
+    setIsRunning(true);
   }
-  const handleContinue = () => {} 
+  const handleContinue = () => {
+    setIsRunning(true)
+  } 
   const handleStop = () => {
-    clearInterval(interval);
-    setCount(0);
+    setIsRunning(false)
   };
 
   return (
