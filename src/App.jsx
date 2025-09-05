@@ -11,6 +11,10 @@ function App() {
   if (showMinutes === 0) {
     setShowMinutes('00')
   }
+  const handleStart = () => {
+    setShowSeconds(showSeconds + 1)
+  }
+
   return (
     <div className= 'justify-center bg-white m-auto w-[50%] min-h-128 rounded-4xl my-26 shadow-2xl text-black'>
       <h1 className='text-4xl text-center font-bold pt-24 pb-20'>Stop Watch</h1>
@@ -18,13 +22,14 @@ function App() {
         {showMinutes}:{showSeconds}
       </div>
       <div className='flex justify-center gap-4 my-16'>
-        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer hover:bg-indigo-800'>
+        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'
+        onAbort={handleStart}>
           Start
         </button>
-        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer hover:bg-indigo-800'>
+        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'>
           Continue
         </button>
-        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl w-40 cursor-pointer hover:bg-indigo-800'>
+        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'>
           Stop
         </button>
       </div>
