@@ -13,6 +13,8 @@ function App() {
   } 
   const handleStop = () => {
     setIsRunning(false)
+    setShowSeconds(0)
+    setShowMinutes(0)
   };
 
   return (
