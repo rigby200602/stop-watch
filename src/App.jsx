@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [showSeconds, setShowSeconds] = useState(58)
+  const [showSeconds, setShowSeconds] = useState(0)
   const [showMinutes, setShowMinutes] = useState(0)
   const handleStart = () => {
     const interval = setInterval(() => {
