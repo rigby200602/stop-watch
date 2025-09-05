@@ -7,7 +7,21 @@ function App() {
   const [isRunning, setIsRunning] = useState(false)
   
   useEffect(() => {
-    
+    let interval
+    if (isRunning) {
+      interval = setInterval(() => {
+        setShowSeconds((prevSeconds) => {
+          if (prevSeconds === 59) {
+            setShowMinutes((prevMinutes) => prevMinutes + 1)
+            return 0
+          }
+          return prevSeconds + 1
+        })
+      }, 1000)
+    } else if (!isRunning && showSeconds !== 0) {
+      clearInterval(interval)
+    }
+    return () => clearInterval(interval)
   }, [isRunning])
 
   const handleStart = () => {
@@ -18,9 +32,12 @@ function App() {
   } 
   const handleStop = () => {
     setIsRunning(false)
+  };
+  const handleReset = () => {
+    setIsRunning(false)
     setShowSeconds(0)
     setShowMinutes(0)
-  };
+  }
 
   return (
     <div className= 'justify-center bg-white m-auto w-[50%] min-h-128 rounded-4xl my-26 shadow-2xl text-black'>
@@ -40,6 +57,10 @@ function App() {
         <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'
         onClick={handleStop}>
           Stop
+        </button>
+        <button className='bg-indigo-600 text-white font-bold px-auto py-4 rounded-2xl lg:w-40 w-24 cursor-pointer hover:bg-indigo-800'
+        onClick={handleReset}>
+          Reset
         </button>
       </div>
     </div>
