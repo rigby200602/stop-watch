@@ -18,10 +18,7 @@ function App() {
           return prevSeconds + 1
         })
       }, 1000)
-    } else if (!isRunning && showSeconds !== 0) {
-      clearInterval(interval)
-    }
-    return () => clearInterval(interval)
+    } else return () => clearInterval(interval)
   }, [isRunning])
 
   const handleStart = () => {
